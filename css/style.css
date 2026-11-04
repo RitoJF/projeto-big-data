@@ -1,0 +1,1002 @@
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    background-color: #111827 !important;
+    color: #F9FAFB;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #1F2937;
+}
+
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #F9FAFB !important;
+}
+
+.hero-moda {
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.rua-moda {
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    background: linear-gradient(
+        to bottom,
+        #CFE4E8 0 86%,
+        #B49B89 86% 100%
+    );
+}
+
+/* Nuvens */
+.nuvem {
+    position: absolute;
+    top: 42px;
+    width: 72px;
+    height: 22px;
+    border-radius: 20px;
+    background: #FFFDF8;
+    z-index: 1;
+}
+
+.nuvem::before,
+.nuvem::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-radius: 50%;
+    background: #FFFDF8;
+}
+
+.nuvem::before {
+    left: 12px;
+    width: 26px;
+    height: 26px;
+}
+
+.nuvem::after {
+    right: 10px;
+    width: 34px;
+    height: 34px;
+}
+
+.nuvem-esquerda {
+    left: 22%;
+}
+
+.nuvem-direita {
+    right: 22%;
+}
+
+/* Prédios ao fundo */
+.predio {
+    position: absolute;
+    bottom: 24px;
+    width: 125px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #D8B7A5;
+    border: 3px solid #713B55;
+    z-index: 2;
+}
+
+.predio::before {
+    content: "";
+    position: absolute;
+    top: -27px;
+    left: -3px;
+    width: 125px;
+    height: 27px;
+    background: #8B5868;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.predio span {
+    width: 27px;
+    height: 34px;
+    margin-top: 18px;
+    background: #D7E9E8;
+    border: 2px solid #713B55;
+}
+
+.predio-esquerdo {
+    left: 7%;
+}
+
+.predio-direito {
+    right: 7%;
+}
+
+/* Postes de iluminação */
+.poste {
+    position: absolute;
+    bottom: 24px;
+    width: 8px;
+    height: 145px;
+    border-radius: 5px 5px 0 0;
+    background: #493B43;
+    z-index: 3;
+}
+
+.poste::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 30px;
+    height: 8px;
+    border-radius: 8px;
+    background: #493B43;
+}
+
+.lampada {
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    width: 18px;
+    height: 15px;
+    border-radius: 50% 50% 40% 40%;
+    background: #F8D985;
+    box-shadow: 0 0 14px #F8D985;
+}
+
+.poste-esquerdo {
+    left: 27%;
+}
+
+.poste-direito {
+    right: 27%;
+}
+
+/* Hidrantes */
+.hidrante {
+    position: absolute;
+    bottom: 27px;
+    width: 25px;
+    height: 39px;
+    border-radius: 8px 8px 4px 4px;
+    background: #B83F45;
+    border: 2px solid #7E2832;
+    z-index: 4;
+}
+
+.hidrante::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 4px;
+    width: 13px;
+    height: 8px;
+    border-radius: 5px 5px 0 0;
+    background: #B83F45;
+}
+
+.hidrante span {
+    position: absolute;
+    top: 10px;
+    left: -7px;
+    width: 35px;
+    height: 8px;
+    border-radius: 5px;
+    background: #B83F45;
+    border: 2px solid #7E2832;
+}
+
+.hidrante-esquerdo {
+    left: 17%;
+}
+
+.hidrante-direito {
+    right: 17%;
+}
+
+/* Loja em destaque */
+.loja-desenho {
+    position: absolute;
+    z-index: 5;
+    bottom: 24px;
+    left: 50%;
+    width: 390px;
+    height: 205px;
+    transform: translateX(-50%);
+    background: #F7EBDD;
+    border: 4px solid #713B55;
+}
+
+.loja-desenho::before {
+    content: "";
+    position: absolute;
+    top: -53px;
+    left: -22px;
+    width: 426px;
+    height: 53px;
+    background: #713B55;
+    clip-path: polygon(8% 100%, 22% 0, 78% 0, 92% 100%);
+}
+
+.placa-loja {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    width: 78%;
+    transform: translateX(-50%);
+    padding: 7px 10px;
+    border-radius: 5px;
+    background: #3B1F35;
+    color: #F8E5B7;
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.toldo-loja {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: repeating-linear-gradient(
+        90deg,
+        #A84D68 0 30px,
+        #F8E5D8 30px 60px
+    );
+}
+
+.vitrine {
+    position: absolute;
+    top: 101px;
+    width: 92px;
+    height: 83px;
+    display: grid;
+    place-items: center;
+    background: #D7E9E8;
+    border: 4px solid #713B55;
+    font-size: 2.5rem;
+}
+
+.vitrine-esquerda {
+    left: 28px;
+}
+
+.vitrine-direita {
+    right: 28px;
+}
+
+.porta-loja {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 66px;
+    height: 94px;
+    transform: translateX(-50%);
+    background: #9B6A7D;
+    border: 4px solid #713B55;
+    border-bottom: 0;
+}
+
+.calcada {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: #9B8B7D;
+    border-top: 3px solid #806F62;
+    z-index: 6;
+}
+
+/* Textos abaixo da ilustração */
+.hero-etiqueta {
+    color: #E3C98A;
+    letter-spacing: 0.3em;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.hero-moda h1 {
+    color: #FFF7F5 !important;
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.hero-descricao {
+    color: #D1D5DB;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Ajustes para telas estreitas */
+@media (max-width: 700px) {
+    .predio,
+    .poste,
+    .hidrante {
+        display: none;
+    }
+
+    .loja-desenho {
+        width: 300px;
+        height: 190px;
+    }
+
+    .loja-desenho::before {
+        left: -17px;
+        width: 326px;
+    }
+
+    .vitrine-esquerda {
+        left: 15px;
+    }
+
+    .vitrine-direita {
+        right: 15px;
+    }
+
+    .hero-moda h1 {
+        font-size: 2.2rem;
+    }
+}
+/* Faz o cenário ocupar toda a largura da janela */
+.rua-moda {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 420px;
+    border-radius: 0;
+}
+
+/* Mantém as casas perto das laterais */
+.predio-esquerdo {
+    left: 5%;
+}
+
+.predio-direito {
+    right: 5%;
+}
+
+/* Prédios altos ao fundo */
+.predio-alto-esquerdo {
+    left: 19%;
+    height: 175px;
+    background: #C9A7A0;
+}
+
+.predio-alto-direito {
+    right: 19%;
+    height: 155px;
+    background: #D4B69F;
+}
+
+/* Janelas em mais de um andar */
+.predio-alto-esquerdo span,
+.predio-alto-direito span {
+    width: 22px;
+    height: 24px;
+    margin: 0;
+}
+
+.predio-alto-esquerdo,
+.predio-alto-direito {
+    display: grid;
+    grid-template-columns: repeat(3, 22px);
+    grid-template-rows: repeat(2, 24px);
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 10px 8px;
+}
+
+@media (max-width: 700px) {
+    .predio-alto-esquerdo,
+    .predio-alto-direito {
+        display: none;
+    }
+}
+/* Aproxima o desenho do topo, logo abaixo da barra do Streamlit */
+[data-testid="stMainBlockContainer"],
+.block-container {
+    padding-top: 0.5rem !important;
+}
+
+.hero-moda {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Azul mais claro para o céu */
+.rua-moda {
+    background: linear-gradient(
+        to bottom,
+        #DFF5FF 0 86%,
+        #B49B89 86% 100%
+    );
+}
+
+/* Nuvens maiores */
+.nuvem {
+    top: 35px;
+    width: 110px;
+    height: 30px;
+}
+
+.nuvem::before {
+    left: 15px;
+    width: 36px;
+    height: 36px;
+}
+
+.nuvem::after {
+    right: 13px;
+    width: 48px;
+    height: 44px;
+}
+
+
+.poste {
+    height: 220px;
+}
+
+/* Faz a cena começar no topo da área de conteúdo e preencher a largura */
+[data-testid="stMainBlockContainer"],
+.block-container {
+    padding-top: 0 !important;
+}
+
+.hero-moda {
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.rua-moda {
+    width: 100vw;
+    height: 460px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 2rem;
+    border-radius: 0;
+    background: linear-gradient(
+        to bottom,
+        #72C9F2 0 86%,
+        #C69A68 86% 100%
+    );
+}
+
+/* Nuvens maiores */
+.nuvem {
+    top: 45px;
+    width: 140px;
+    height: 38px;
+}
+
+.nuvem::before {
+    left: 18px;
+    width: 48px;
+    height: 48px;
+}
+
+.nuvem::after {
+    right: 16px;
+    width: 60px;
+    height: 56px;
+}
+
+/* Prédios com cores mais vivas */
+.predio {
+    background: #E6A77A;
+    border-color: #713B55;
+}
+
+.predio::before {
+    background: #B54C70;
+}
+
+.predio-alto-esquerdo {
+    background: #D9827C;
+}
+
+.predio-alto-direito {
+    background: #F0B56F;
+}
+
+/* Postes mais afastados dos prédios e mais baixos que eles */
+.poste {
+    height: 135px;
+}
+
+.poste-esquerdo {
+    left: 34%;
+}
+
+.poste-direito {
+    right: 34%;
+}
+
+/* Afasta os hidrantes dos prédios */
+.hidrante-esquerdo {
+    left: 13%;
+}
+
+.hidrante-direito {
+    right: 13%;
+}
+
+/* Cores mais fortes para a loja e suas vitrines */
+.loja-desenho {
+    background: #FFF0D6;
+    border-color: #8D3152;
+}
+
+.loja-desenho::before {
+    background: #8D3152;
+}
+
+.placa-loja {
+    background: #531A3D;
+    color: #FFE28A;
+}
+
+.toldo-loja {
+    background: repeating-linear-gradient(
+        90deg,
+        #E44770 0 30px,
+        #FFF0D6 30px 60px
+    );
+}
+
+.vitrine {
+    background: #9CE5F2;
+    border-color: #8D3152;
+}
+
+@media (max-width: 700px) {
+    .rua-moda {
+        height: 360px;
+    }
+}
+/* Céu, passeio e asfalto */
+.rua-moda {
+    background: linear-gradient(
+        to bottom,
+        #72C9F2 0 84%,
+        #D6B078 84% 86%,
+        #292C33 86% 100%
+    );
+}
+
+/* Estrada escura com traços amarelos */
+.rua-asfalto {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    background: #292C33;
+    border-top: 5px solid #B49B89;
+}
+
+.rua-asfalto::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(
+        90deg,
+        #FFD447 0 44px,
+        transparent 44px 82px
+    );
+}
+
+/* Apoia casas, loja e postes acima da estrada */
+.predio,
+.loja-desenho,
+.poste {
+    bottom: 70px;
+}
+
+.hidrante {
+    bottom: 73px;
+}
+
+/* Nuvens maiores, com contorno suave */
+.nuvem {
+    width: 130px;
+    height: 34px;
+    border-radius: 40px;
+    background: #FFFFFF;
+    filter: drop-shadow(0 4px 4px rgb(48 93 120 / 18%));
+}
+
+.nuvem::before {
+    left: 18px;
+    bottom: 6px;
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF;
+}
+
+.nuvem::after {
+    right: 17px;
+    bottom: 3px;
+    width: 58px;
+    height: 54px;
+    background: #FFFFFF;
+}
+
+/* Carros */
+.carro {
+    position: absolute;
+    z-index: 4;
+    bottom: 14px;
+    width: 82px;
+    height: 28px;
+    border-radius: 14px 20px 6px 6px;
+}
+
+.carro::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: -16px;
+    width: 46px;
+    height: 19px;
+    border-radius: 15px 15px 2px 2px;
+    background: inherit;
+}
+
+.carro span {
+    position: absolute;
+    bottom: -6px;
+    width: 17px;
+    height: 17px;
+    border: 3px solid #D8DDE5;
+    border-radius: 50%;
+    background: #17191E;
+}
+
+.carro span:first-child {
+    left: 10px;
+}
+
+.carro span:last-child {
+    right: 10px;
+}
+
+.carro-azul {
+    left: -100px;
+    background: #3987E8;
+    animation: carro-para-direita 18s linear infinite;
+}
+
+.carro-coral {
+    right: -100px;
+    bottom: 39px;
+    background: #E86F58;
+    animation: carro-para-esquerda 23s linear infinite;
+}
+
+@keyframes carro-para-direita {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(100vw + 200px)); }
+}
+
+@keyframes carro-para-esquerda {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100vw - 200px)); }
+}
+
+@media (max-width: 700px) {
+    .rua-asfalto {
+        height: 60px;
+    }
+
+    .rua-asfalto::before {
+        top: 26px;
+    }
+
+    .predio,
+    .loja-desenho,
+    .poste {
+        bottom: 60px;
+    }
+
+    .hidrante {
+        bottom: 63px;
+    }
+
+    .nuvem {
+        transform: scale(0.75);
+    }
+}
+/* Nuvens menores e arredondadas */
+.nuvem {
+    top: 42px;
+    width: 72px;
+    height: 22px;
+    border-radius: 20px;
+    background: #FFFDF8;
+    filter: none;
+}
+
+.nuvem::before {
+    left: 12px;
+    bottom: 5px;
+    width: 26px;
+    height: 26px;
+    background: #FFFDF8;
+}
+
+.nuvem::after {
+    right: 10px;
+    bottom: 5px;
+    width: 34px;
+    height: 34px;
+    background: #FFFDF8;
+}
+
+/* Sol */
+.sol {
+    position: absolute;
+    top: 35px;
+    right: 12%;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #FFD54A;
+    box-shadow: 0 0 28px rgb(255 213 74 / 55%);
+    z-index: 0;
+}
+
+/* Portas das casas e dos prédios */
+.porta-predio {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 26px;
+    height: 38px;
+    transform: translateX(-50%);
+    background: #94616C;
+    border: 2px solid #713B55;
+    border-bottom: 0;
+}
+
+/* Camadas: rua atrás, carros na rua e loja em destaque */
+.rua-asfalto {
+    z-index: 1;
+}
+
+.predio {
+    z-index: 2;
+}
+
+.carro {
+    z-index: 3;
+}
+
+.loja-desenho {
+    z-index: 6;
+}
+
+/* Aumenta a altura do asfalto e alinha as construções com a rua */
+.rua-asfalto {
+    height: 90px;
+    z-index: 1;
+}
+
+.predio,
+.loja-desenho,
+.poste {
+    bottom: 90px;
+}
+
+.hidrante {
+    bottom: 93px;
+}
+
+/* Carros na frente das construções e em faixas separadas */
+.carro {
+    z-index: 8;
+    height: 24px;
+}
+
+.carro::before {
+    top: -11px;
+    height: 13px;
+}
+
+.carro span {
+    bottom: -5px;
+    width: 14px;
+    height: 14px;
+}
+
+.carro-azul {
+    bottom: 8px;
+}
+
+.carro-coral {
+    bottom: 53px;
+    animation-delay: -9s;
+}
+
+@media (max-width: 700px) {
+    .rua-asfalto {
+        height: 75px;
+    }
+
+    .predio,
+    .loja-desenho,
+    .poste {
+        bottom: 75px;
+    }
+
+    .hidrante {
+        bottom: 78px;
+    }
+
+    .carro-coral {
+        bottom: 45px;
+    }
+}
+
+.hero-descricao {
+    text-align: center;
+}
+
+.hero-moda .hero-descricao {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
+}
+.titulo-grafico {
+    color: #FFF7F5 !important;
+    text-align: center;
+    font-size: 2.5rem !important;
+    margin: 1.5rem 0 1rem;
+}
+[data-testid="stSelectbox"] label {
+    color: #E9C4D0 !important;
+    font-weight: 600;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    min-height: 46px;
+    border: 1px solid #A85C76;
+    border-radius: 10px;
+    background-color: #211B27;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] span {
+    color: #FFF7F5;
+}
+
+/* Centraliza verticalmente a coluna da direita, onde ficam os ajustes */
+div[data-testid="stHorizontalBlock"]
+> div[data-testid="column"]:nth-child(2)
+> div[data-testid="stVerticalBlock"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 560px;
+}
+
+/* Aumenta e centraliza o texto abaixo do gráfico */
+[data-testid="stCaptionContainer"] {
+    width: 100%;
+    text-align: center;
+    font-size: 1.15rem !important;
+    line-height: 1.6;
+    color: #D7DCE5 !important;
+    margin-top: 1rem;
+}
+
+div[data-testid="stHorizontalBlock"]
+> div[data-testid="column"]:nth-child(2)
+h3 {
+    margin-top: 50px !important;
+}
+.titulo-escolha-ano {
+    margin: 2rem 0 1rem;
+    color: #FFF7F5;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.st-key-ano_grafico [data-baseweb="select"] > div {
+    min-height: 62px;
+    border: 2px solid #F08CA7;
+    border-radius: 14px;
+    background-color: #211B27;
+}
+
+.st-key-ano_grafico [data-baseweb="select"] span {
+    color: #FFF7F5;
+    font-size: 1.25rem;
+}
+/* Cartão ao redor de cada gráfico Plotly */
+[data-testid="stPlotlyChart"] {
+    padding: 12px;
+    border: 1px solid #3B465B;
+    border-radius: 16px;
+    background-color: #1B2432;
+    box-shadow: 0 8px 22px rgb(0 0 0 / 22%);
+    overflow: hidden;
+}
+
+/* Descrições dos gráficos maiores e mais destacadas */
+[data-testid="stCaptionContainer"] {
+    margin-top: 0.7rem;
+    padding: 12px 16px;
+    border-left: 4px solid #F08CA7;
+    border-radius: 8px;
+    background-color: #1B2432;
+    color: #E5E7EB !important;
+    text-align: center;
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+}
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+    background-color: #08040D !important;
+    color: #F8F0FF;
+}
+
+[data-testid="stPlotlyChart"] {
+    background-color: #160B20;
+    border: 1px solid #63358A;
+    border-radius: 16px;
+    box-shadow: 0 0 18px rgb(154 61 255 / 16%);
+}
+
+[data-testid="stCaptionContainer"] {
+    color: #E2D3EF !important;
+    background-color: #13091B;
+    border-left: 4px solid #B44CFF;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background-color: #160B20 !important;
+    border: 1px solid #8D42C2 !important;
+    border-radius: 10px;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] span,
+[data-testid="stSelectbox"] label {
+    color: #F8F0FF !important;
+}
+
+.titulo-grafico,
+.titulo-escolha-ano {
+    color: #F3DEFF !important;
+}
+
+[data-testid="stImage"] img {
+    image-rendering: pixelated;
+}
+
+[data-testid="stImage"] {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+}
+
+[data-testid="stImage"] img {
+    margin-left: 0 !important;
+}
