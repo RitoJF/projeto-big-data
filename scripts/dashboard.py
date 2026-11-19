@@ -18,6 +18,16 @@ def formatar_real(valor):
     return f"R$ {valor_formatado}"
 
 
+def manter_meses_completos(df_periodo):
+    dias_registrados = (
+        df_periodo
+        .groupby(["ano", "mes"])["data"]
+        .transform("count")
+    )
+    dias_do_mes = df_periodo["data"].dt.days_in_month
+    return df_periodo[dias_registrados == dias_do_mes]
+
+
 st.set_page_config(
     page_title="Dashboard - Mundo da Moda",
     layout="wide",
@@ -169,7 +179,7 @@ with col_anual:
         key="tipo_grafico",
     )
 
-    df_ano_grafico = df[df["ano"] == ano_grafico]
+    df_ano_grafico = manter_meses_completos(df[df["ano"] == ano_grafico])
 
     dados_mensais_grafico = (
         df_ano_grafico
@@ -407,7 +417,7 @@ with col_media_mensal:
     df_ano = df[df["ano"] == ano_grafico].copy()
 
     media_diaria_por_mes = (
-        df_ano
+        manter_meses_completos(df_ano)
         .groupby("mes", as_index=False)["faturamento"]
         .mean()
         .rename(columns={"faturamento": "media_diaria"})
@@ -438,8 +448,9 @@ with col_media_mensal:
 
     if ano_grafico == 2026:
         st.caption(
-            "Agosto de 2026 está parcial; a média considera os dias "
-            "registrados até 01/08/2026."
+            "Cada barra mostra a média diária de faturamento do mês. "
+            "Os dados de 2026 vão até 01/08/2026; agosto fica de fora "
+            "por estar incompleto."
         )
     else:
         st.caption("Cada barra mostra a média diária de faturamento do mês.")
