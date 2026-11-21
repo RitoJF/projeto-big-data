@@ -156,6 +156,7 @@ def configurar_grafico(fig, altura=380, eixo_dinheiro="y"):
         paper_bgcolor="#1B2432",
         plot_bgcolor="#1B2432",
         font_color="#F9FAFB",
+        separators=",.",
         height=altura,
         margin=dict(l=35, r=20, t=25, b=45),
     )
