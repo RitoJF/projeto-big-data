@@ -150,17 +150,20 @@ nomes_meses_grafico = {
 }
 
 col_grafico, col_controles = st.columns([4, 1], gap="large")
-def configurar_grafico(fig, altura=380):
+def configurar_grafico(fig, altura=380, eixo_dinheiro="y"):
     fig.update_layout(
         template="plotly_dark",
         paper_bgcolor="#1B2432",
         plot_bgcolor="#1B2432",
         font_color="#F9FAFB",
-        yaxis_tickprefix="R$ ",
-        yaxis_tickformat=",.0f",
         height=altura,
         margin=dict(l=35, r=20, t=25, b=45),
     )
+    # Em gráfico horizontal o valor fica no eixo x; o y guarda as datas.
+    if eixo_dinheiro == "x":
+        fig.update_xaxes(tickprefix="R$ ", tickformat=",.0f")
+    else:
+        fig.update_yaxes(tickprefix="R$ ", tickformat=",.0f")
     return fig
 
 
@@ -529,7 +532,7 @@ with col_maiores_dias:
         color_discrete_sequence=["#D89BFF"],
     )
 
-    configurar_grafico(fig_melhores_dias)
+    configurar_grafico(fig_melhores_dias, eixo_dinheiro="x")
     fig_melhores_dias.update_layout(yaxis_title="Data")
 
     st.plotly_chart(fig_melhores_dias, use_container_width=True)
