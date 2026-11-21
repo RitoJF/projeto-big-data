@@ -619,13 +619,24 @@ fig_acumulado = px.line(
     },
 )
 
-fig_acumulado.update_traces(line_width=3)
+fig_acumulado.update_traces(
+    line_width=3,
+    hovertemplate="%{fullData.name}: R$ %{y:,.2f}<extra></extra>",
+)
 fig_acumulado.update_layout(
     hovermode="x unified",
     legend_title_text="Ano",
 )
 
 configurar_grafico(fig_acumulado, altura=440)
+
+# O ano 2000 só alinha os anos comparados no mesmo eixo; não pode
+# aparecer para quem lê o gráfico.
+fig_acumulado.update_xaxes(
+    tickvals=[pd.Timestamp(2000, mes, 1) for mes in nomes_meses_grafico],
+    ticktext=list(nomes_meses_grafico.values()),
+    hoverformat="%d/%m",
+)
 
 st.plotly_chart(fig_acumulado, use_container_width=True)
 
