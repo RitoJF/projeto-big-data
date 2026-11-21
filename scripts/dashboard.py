@@ -159,6 +159,8 @@ def configurar_grafico(fig, altura=380, eixo_dinheiro="y"):
         separators=",.",
         height=altura,
         margin=dict(l=35, r=20, t=25, b=45),
+        # Legenda em cima para não disputar a largura do gráfico com os anos.
+        legend=dict(orientation="h", y=1.1),
     )
     # Em gráfico horizontal o valor fica no eixo x; o y guarda as datas.
     if eixo_dinheiro == "x":
